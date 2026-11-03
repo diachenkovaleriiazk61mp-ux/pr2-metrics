@@ -1,0 +1,175 @@
+{
+  "capacities": [
+    {
+      "replicas": 1,
+      "x": 270.3333333333333,
+      "std": 84.00992004916245,
+      "step_rate": 400,
+      "generator_limited": false,
+      "best": {
+        "start": 30,
+        "end": 50,
+        "window_start": 35,
+        "window_end": 50,
+        "target_rps": 400,
+        "achieved_rps": 270.3333333333333,
+        "std_rps": 84.00992004916245,
+        "sent_rps": 400.0,
+        "success_count": 4055,
+        "http_non2xx": 1969,
+        "timeouts": 0,
+        "non2xx_count": 1969,
+        "connection_errors": 0,
+        "non2xx_fraction": 0.32685922974767595,
+        "failure_fraction": 0.32685922974767595,
+        "p50_ms": 132.50320008955896,
+        "p95_ms": 435.9383450238965,
+        "p99_ms": 634.5763310790048,
+        "p95_dispatch_lag_ms": 1.4997101272456348,
+        "pod_counts": {
+          "1b60a105b1e7": 6024
+        }
+      }
+    },
+    {
+      "replicas": 2,
+      "x": 427.8,
+      "std": 108.46869199385205,
+      "step_rate": 600,
+      "generator_limited": false,
+      "best": {
+        "start": 50,
+        "end": 70,
+        "window_start": 55,
+        "window_end": 70,
+        "target_rps": 600,
+        "achieved_rps": 427.8,
+        "std_rps": 108.46869199385205,
+        "sent_rps": 600.2,
+        "success_count": 6417,
+        "http_non2xx": 2587,
+        "timeouts": 0,
+        "non2xx_count": 2587,
+        "connection_errors": 0,
+        "non2xx_fraction": 0.28731674811195024,
+        "failure_fraction": 0.28731674811195024,
+        "p50_ms": 201.69513334985822,
+        "p95_ms": 501.0000616195615,
+        "p99_ms": 676.5850243344902,
+        "p95_dispatch_lag_ms": 1.6055399784818285,
+        "pod_counts": {
+          "9057c30da552": 4503,
+          "1b60a105b1e7": 4501
+        }
+      }
+    },
+    {
+      "replicas": 3,
+      "x": 596.7333333333333,
+      "std": 46.57630707722952,
+      "step_rate": 600,
+      "generator_limited": false,
+      "best": {
+        "start": 50,
+        "end": 70,
+        "window_start": 55,
+        "window_end": 70,
+        "target_rps": 600,
+        "achieved_rps": 596.7333333333333,
+        "std_rps": 46.57630707722952,
+        "sent_rps": 600.0,
+        "success_count": 8951,
+        "http_non2xx": 48,
+        "timeouts": 0,
+        "non2xx_count": 48,
+        "connection_errors": 0,
+        "non2xx_fraction": 0.005333925991776864,
+        "failure_fraction": 0.005333925991776864,
+        "p50_ms": 27.51009981147945,
+        "p95_ms": 297.02393314801157,
+        "p99_ms": 374.82774194795655,
+        "p95_dispatch_lag_ms": 1.5832351287826896,
+        "pod_counts": {
+          "b27888bc8a8e": 3000,
+          "1b60a105b1e7": 2999,
+          "9057c30da552": 3000
+        }
+      }
+    },
+    {
+      "replicas": 4,
+      "x": 633.8666666666667,
+      "std": 168.49708207166873,
+      "step_rate": 800,
+      "generator_limited": false,
+      "best": {
+        "start": 70,
+        "end": 90,
+        "window_start": 75,
+        "window_end": 90,
+        "target_rps": 800,
+        "achieved_rps": 633.8666666666667,
+        "std_rps": 168.49708207166873,
+        "sent_rps": 800.4,
+        "success_count": 9508,
+        "http_non2xx": 2563,
+        "timeouts": 0,
+        "non2xx_count": 2563,
+        "connection_errors": 0,
+        "non2xx_fraction": 0.21232706486620828,
+        "failure_fraction": 0.21232706486620828,
+        "p50_ms": 262.645699782297,
+        "p95_ms": 658.6376500781626,
+        "p99_ms": 910.9382398892177,
+        "p95_dispatch_lag_ms": 1.760774990543723,
+        "pod_counts": {
+          "6a1e2f932d2e": 3068,
+          "9057c30da552": 3058,
+          "1b60a105b1e7": 2876,
+          "b27888bc8a8e": 3069
+        }
+      }
+    }
+  ],
+  "fit": {
+    "valid": true,
+    "lambda_": 270.3333333333333,
+    "sigma": 0.16701998630108206,
+    "kappa": 0.01522956470066218,
+    "n_star": 7.3956022422604235,
+    "asymptote": null,
+    "raw_sigma": 0.16701998630108206,
+    "raw_kappa": 0.01522956470066218,
+    "points": [
+      {
+        "n": 2,
+        "c": 1.58249075215783,
+        "u": 1,
+        "v": 2,
+        "y": 0.26383045036621455
+      },
+      {
+        "n": 3,
+        "c": 2.2073982737361284,
+        "u": 2,
+        "v": 6,
+        "y": 0.3590660261423304
+      },
+      {
+        "n": 4,
+        "c": 2.344759556103576,
+        "u": 3,
+        "v": 12,
+        "y": 0.7059318468657971
+      }
+    ],
+    "sums": {
+      "u2": 14,
+      "v2": 184,
+      "uv": 50,
+      "uy": 3.0997580432482668,
+      "vy": 11.153239219975976,
+      "denominator": 76
+    }
+  }
+}

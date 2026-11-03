@@ -1,0 +1,13 @@
+{
+  "stop_started_epoch": 1793711394.19824,
+  "exit_code": 0,
+  "stop_finished_epoch": 1793711395.2284808,
+  "logs": "INFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Database pool closed; shutdown complete\nINFO:     Application shutdown complete.\nINFO:     Finished server process [1]\n",
+  "window_seconds": [
+    2.7012691497802734,
+    12.701269149780273
+  ],
+  "requests_in_window": 2002,
+  "failures": 0,
+  "passed": true
+}

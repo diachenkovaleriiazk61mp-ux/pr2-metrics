@@ -1,0 +1,11 @@
+{
+  "docker_cpus": 8,
+  "docker_memory_bytes": 3554910208,
+  "docker_os": "Docker Desktop",
+  "host_cpus": 8,
+  "host_memory_bytes": 7472078848,
+  "same_host": true,
+  "generator_processes": 2,
+  "compose_version": "Docker Compose version v5.6.0\n",
+  "base_commit": "775a178842a4469d2fd772e1a371d7e9acc25aa9"
+}
