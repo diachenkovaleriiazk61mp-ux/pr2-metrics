@@ -1,0 +1,26 @@
+[
+  {
+    "discoveredLabels": {
+      "__address__": "172.21.0.4:8000",
+      "__meta_dns_name": "web",
+      "__metrics_path__": "/metrics",
+      "__scheme__": "http",
+      "__scrape_interval__": "5s",
+      "__scrape_timeout__": "4s",
+      "job": "web"
+    },
+    "labels": {
+      "instance": "172.21.0.4:8000",
+      "job": "web"
+    },
+    "scrapePool": "web",
+    "scrapeUrl": "http://172.21.0.4:8000/metrics",
+    "globalUrl": "http://172.21.0.4:8000/metrics",
+    "lastError": "",
+    "lastScrape": "2026-11-03T13:00:21.344041264Z",
+    "lastScrapeDuration": 0.009502051,
+    "health": "up",
+    "scrapeInterval": "5s",
+    "scrapeTimeout": "4s"
+  }
+]
