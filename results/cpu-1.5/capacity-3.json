@@ -1,0 +1,33 @@
+{
+  "replicas": 3,
+  "x": 596.7333333333333,
+  "std": 46.57630707722952,
+  "step_rate": 600,
+  "generator_limited": false,
+  "best": {
+    "start": 50,
+    "end": 70,
+    "window_start": 55,
+    "window_end": 70,
+    "target_rps": 600,
+    "achieved_rps": 596.7333333333333,
+    "std_rps": 46.57630707722952,
+    "sent_rps": 600.0,
+    "success_count": 8951,
+    "http_non2xx": 48,
+    "timeouts": 0,
+    "non2xx_count": 48,
+    "connection_errors": 0,
+    "non2xx_fraction": 0.005333925991776864,
+    "failure_fraction": 0.005333925991776864,
+    "p50_ms": 27.51009981147945,
+    "p95_ms": 297.02393314801157,
+    "p99_ms": 374.82774194795655,
+    "p95_dispatch_lag_ms": 1.5832351287826896,
+    "pod_counts": {
+      "b27888bc8a8e": 3000,
+      "1b60a105b1e7": 2999,
+      "9057c30da552": 3000
+    }
+  }
+}
