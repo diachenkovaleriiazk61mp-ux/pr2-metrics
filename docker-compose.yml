@@ -1,0 +1,60 @@
+name: vaccinations-pr2
+services:
+  db:
+    image: postgres:16.10-bookworm
+    environment:
+      POSTGRES_DB: vaccinations
+      POSTGRES_USER: vaccinations
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run start.ps1 or start.sh}
+      TZ: Europe/Kyiv
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
+    networks: [backend]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U vaccinations -d vaccinations']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  web:
+    build: .
+    image: vaccinations-pr2:local
+    environment:
+      DATABASE_URL: postgresql://vaccinations:${POSTGRES_PASSWORD}@db:5432/vaccinations
+      DB_POOL_SIZE: '15'
+      MAX_INFLIGHT_REQUESTS: '64'
+    cpus: ${WEB_CPUS:-1.5}
+    mem_limit: 1g
+    stop_grace_period: 35s
+    networks: [backend]
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, /opt/venv/bin/python, -c, 'import urllib.request; urllib.request.urlopen("http://localhost:8000/healthz",timeout=2)']
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  lb:
+    image: nginx:1.28.0-alpine
+    ports: ['${PORT:-18081}:8080']
+    volumes: ['./nginx.conf:/etc/nginx/nginx.conf:ro']
+    networks: [backend, public]
+    depends_on:
+      web:
+        condition: service_healthy
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    command: ['--config.file=/etc/prometheus/prometheus.yml', '--storage.tsdb.path=/prometheus', '--storage.tsdb.retention.time=7d']
+    ports: ['${PROMETHEUS_PORT:-19090}:9090']
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - promdata:/prometheus
+    networks: [backend, public]
+networks:
+  backend:
+    internal: true
+  public: {}
+volumes:
+  pgdata: {}
+  promdata: {}
