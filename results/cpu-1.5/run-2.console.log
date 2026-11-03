@@ -1,0 +1,4 @@
+{"target": 200, "achieved": 200.06666666666666, "sent": 200.0, "dispatch_lag_p95_ms": 1.5847299597226077}
+{"target": 400, "achieved": 398.2, "sent": 400.0, "dispatch_lag_p95_ms": 1.5295401215553286}
+{"target": 600, "achieved": 427.8, "sent": 600.2, "dispatch_lag_p95_ms": 1.6055399784818285}
+{"target": 800, "achieved": 353.93333333333334, "sent": 800.0, "dispatch_lag_p95_ms": 1.5665449434891336}
